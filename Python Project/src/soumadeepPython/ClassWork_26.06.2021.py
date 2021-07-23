@@ -78,7 +78,7 @@ print(f"Min = {min}")
 
 # # Write a program to check if the year entered by the user is a leap year or not.
 year = int(input("Enter year in yyyy format: "))
-if(year % 4 == 0 and year%100!=0 or year % 400 == 0):
+if(year % 4 == 0 and year % 100 != 0 or year % 400 == 0):
     print("Leap Year")
 else:
     print("Not a leap Year")
