@@ -19,3 +19,11 @@ else:
 
 
 # # WAP to print 0,5,10,15,20....till enter -1
+num_Input = 0
+numbers = []
+while(num_Input != -1):
+    num_Input = int(input("Enter number: "))
+    if(num_Input % 5 == 0):
+        numbers.append(num_Input)
+for i in numbers:
+    print(i, end=', ')
