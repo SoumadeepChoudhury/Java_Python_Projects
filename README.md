@@ -21,7 +21,7 @@ Thank you. <br />Have Fun Coding.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/SoumadeepChoudhury/Java_Python_Projects/blob/master/LICENSE)
 
 
 
