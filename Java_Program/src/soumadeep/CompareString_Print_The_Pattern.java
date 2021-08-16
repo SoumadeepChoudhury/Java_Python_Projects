@@ -30,7 +30,7 @@ public class CompareString_Print_The_Pattern {
             System.out.println("Both are same.");
 
         int k = 2;
-        for (int i = 0; i < Math.round(large.length() / 2); i++) {
+        for (int i = 0; i < large.length() / 2; i++) {
             for (int j = 0; j < i; j++)
                 System.out.print(" ");
             System.out.print(large.charAt(i));
@@ -38,6 +38,11 @@ public class CompareString_Print_The_Pattern {
                 System.out.print(" ");
             k += 2;
             System.out.println(large.charAt(large.length() - i - 1));
+        }
+        if (large.length() % 2 != 0) {
+            for (int i = 0; i < large.length() / 2; i++)
+                System.out.print(" ");
+            System.out.println(large.charAt(large.length() / 2));
         }
     }
 }
