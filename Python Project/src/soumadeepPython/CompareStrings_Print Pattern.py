@@ -18,7 +18,7 @@ elif(user_Input1 > user_Input2):
 else:
     print("Both are equal")
 k = 2
-for i in range(round(len(large)/2)):
+for i in range(int(len(large)/2)):
     for j in range(i):
         print(" ", end='')
     print(large[i], end='')
@@ -26,7 +26,9 @@ for i in range(round(len(large)/2)):
         print(" ", end='')
     k += 2
     print(large[len(large)-i-1])
-
+if(len(large) % 2 != 0):
+    print(" "*int(len(large)/2), end='')
+    print(large[int(len(large)/2)])
 
 # PROCESS 2
 small, large = min(user_Input1, user_Input2), max(user_Input1, user_Input2)
