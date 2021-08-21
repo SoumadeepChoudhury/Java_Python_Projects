@@ -4,17 +4,16 @@ A positive n digit number X is called a Keith number (or repfigit number) if it 
 
 input_Number = int(input("Enter number to check for keith number: "))
 series = list(str(input_Number))
-num = input_Number
 sum = 0
 k = 0
-while(sum != num):
+while(sum != input_Number):
     sum = 0
     for i in range(k, len(series)):
         sum += int(series[i])
     series.append(str(sum))
     k += 1
-    if sum == num:
+    if sum == input_Number:
         print("Keith Number")
-    elif(sum > num):
+    elif(sum > input_Number):
         print("Not Keith number")
         break
