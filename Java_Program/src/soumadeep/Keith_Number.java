@@ -13,13 +13,17 @@ class Keith_Number {
         int sum = 0;
         int num = number;
         int arr[] = new int[Integer.toString(number).length()];
-        int i = -1;
+        int i = -1; // Variable to match the array index position.
+
+        // Separating the digits of the number inputed.
         while (number != 0) {
             i++;
             int d = number % 10;
             arr[arr.length - 1 - i] = d;
             number /= 10;
         }
+
+        // Checking for the Keith Property.
         while (sum != num) {
             sum = 0;
             for (int j = 0; j < arr.length; j++)
