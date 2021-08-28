@@ -1,11 +1,11 @@
 # # WAP accept 10 elements in a list and display Even elements from that list.
-# list_input = []
-# for _ in range(10):
-#     list_input.append(int(input("Enter value: ")))
-# print("These are Even: ")
-# for i in list_input:
-#     if(i % 2 == 0):
-#         print(i)
+list_input = []
+for _ in range(10):
+    list_input.append(int(input("Enter value: ")))
+print("These are Even: ")
+for i in list_input:
+    if(i % 2 == 0):
+        print(i)
 
 
 # # WAP accept 10 elements in list and accept a number and check how many times the number occurs in  the list...
