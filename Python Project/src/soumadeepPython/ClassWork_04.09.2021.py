@@ -78,3 +78,18 @@ elif user_choice == 9:
     print("The list is:", list1)
 else:
     print("In valid choice")
+
+
+# # WAP accept ten integer elements in a list and sort the list ascending and descending in new list. Display the difference between two list of each element.
+input_list = []
+for _ in range(10):
+    user_element = int(input("Enter integer element: "))
+    input_list.append(user_element)
+ascending = sorted(input_list)
+descending = sorted(input_list, reverse=True)
+print("Ascending: ", ascending)
+print("Descending: ", descending)
+
+for i in range(len(input_list)):
+    print(
+        f"Diff between element {i} of booth the list is: {descending[i]-ascending[i]}")
