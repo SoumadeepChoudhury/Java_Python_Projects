@@ -93,3 +93,55 @@ print("Descending: ", descending)
 for i in range(len(input_list)):
     print(
         f"Diff between element {i} of booth the list is: {descending[i]-ascending[i]}")
+
+
+############### HOMEWORK ################
+
+# # WAP to increment the elements of a list with a number.
+user_List = eval(input("Enter a list conatining integer elemets: "))
+number = int(input("Enter number by which increament is to be done: "))
+for i in range(len(user_List)):
+    user_List[i] += number
+print(f'Your new List is: {user_List}')
+
+# # WAP that reverses a list of integers (in place).
+user_List = eval(input("Enter a list conatining integer elemets: "))
+
+'''METHOD I '''  # converting to string and reversing.
+for i in range(len(user_List)):
+    user_List[i] = int(str(user_List[i])[::-1])
+print(f"Your new reversed list is {user_List}")
+
+'''METHOD II'''  # using reverse algorithm of integers.
+for i in range(len(user_List)):
+    d = 0
+    while(user_List[i] != 0):
+        d = d*10+user_List[i] % 10
+        user_List[i] //= 10
+    user_List[i] = d
+print(f"Your new reversed list is {user_List}")
+
+# # WAP asking the user to enter a list containing numbers 1 to 12. Then replace all the entries in the list that are greater than 10 with 10.
+user_List = eval(
+    input("Enter a list containing integer numbers between 1 and 12: "))
+for i in range(len(user_List)):
+    if user_List[i] > 10:
+        user_List[i] = 10
+print(f"Your modified list is: {user_List}")
+
+
+# # WAP asking the user to enter a list of strings. Create a new list that consists of those strings with their first characters removed.
+user_List = eval(input("Enter a list conatining String elements: "))
+mod_List = []
+for i in range(len(user_List)):
+    mod_List.append(user_List[i].replace(user_List[i][0], ''))
+print(f"Your Modified new List is {mod_List}")
+
+
+# # WAP to check if a number is present in the list or not. If the number is present, print the position of the number. Print an appropriate message if the number is not present in the list.
+user_List = eval(input("Enter a list conatining integer elements: "))
+number = int(input("Enter number to check: "))
+if number in user_List:
+    print(f"Number is present at position {user_List.index(number)+1}")
+else:
+    print(f"{number} is not present in the list.")
