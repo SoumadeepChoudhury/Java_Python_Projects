@@ -32,3 +32,15 @@ length = int(input("Enter length: "))
 breadth = int(input("Enter breadth: "))
 area = Area(length, breadth)
 print(f"The area of rectangle is : {area}")
+
+
+# # Define a function to calculate factorial of any number.
+def factorial(n):
+    f = 1
+    for i in range(1, n+1):
+        f *= i
+    return f
+
+
+user_Input = int(input("Enter any number to find factorial: "))
+print(f"Factorial of {user_Input} is : {factorial(user_Input)}")
