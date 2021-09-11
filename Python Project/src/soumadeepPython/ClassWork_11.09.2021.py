@@ -20,3 +20,15 @@ def sum(n):
 
 user_Input = int(input("Enter value of n: "))
 print(f"Sum of {user_Input} natural number is: {sum(user_Input)}")
+
+
+# # Write a function to calculate the area of a rectangle.
+def Area(l, b):
+    area = l*b
+    return area
+
+
+length = int(input("Enter length: "))
+breadth = int(input("Enter breadth: "))
+area = Area(length, breadth)
+print(f"The area of rectangle is : {area}")
