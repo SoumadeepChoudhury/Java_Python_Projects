@@ -37,10 +37,16 @@ print(f"The area of rectangle is : {area}")
 # # Define a function to calculate factorial of any number.
 def factorial(n):
     f = 1
-    for i in range(1, n+1):
-        f *= i
-    return f
+    if n == 0:
+        return f
+    else:
+        for i in range(1, n+1):
+            f *= i
+        return f
 
 
 user_Input = int(input("Enter any number to find factorial: "))
 print(f"Factorial of {user_Input} is : {factorial(user_Input)}")
+
+
+# # HOMEWORK  Suggested LAB Exercise. Q1,2,3
