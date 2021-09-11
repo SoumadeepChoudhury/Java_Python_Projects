@@ -5,4 +5,5 @@ def Area(r):
 
 
 radius = int(input("Enter radius: "))
-print(Area(radius))
+area = Area(radius)
+print(f"The area of circle is : {area}")
