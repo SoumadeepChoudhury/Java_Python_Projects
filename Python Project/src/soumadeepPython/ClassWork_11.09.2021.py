@@ -1,5 +1,4 @@
 # # WAP to create a function in python that calculate area of the circle and return the value. Access the radius and call the above function.
-
 def Area(r):
     area = 3.14*r*r
     return area
@@ -49,4 +48,45 @@ user_Input = int(input("Enter any number to find factorial: "))
 print(f"Factorial of {user_Input} is : {factorial(user_Input)}")
 
 
-# # HOMEWORK  Suggested LAB Exercise. Q1,2,3
+####################### HOMEWORK ###########################
+
+
+# # Write a program to check the divisibility of a number by 7 that is passed as a parameter to the user defined function.
+def check_Divisiblity(n):
+    if(n % 7 == 0):
+        return "Divisible"
+    else:
+        return "Indivisible"
+
+
+user_Input = int(input("Enter Number: "))
+print(f"{user_Input} is {check_Divisiblity(user_Input)} by 7")
+
+
+# # Write a program that uses a user defined function that accepts name and gender(as M for Male, F for Female) and prefixes Mr/Ms on the basis of the gender.
+def prefixes(name, gender):
+    if(gender == 'M'):
+        name = "Mr. "+name
+    elif(gender == 'F'):
+        name = "Ms. "+name
+    else:
+        return "Type your gender correctly"
+    return name
+
+
+name = input("Enter your Name: ")
+gender = input(
+    "Enter your Gender as 'M' for Male and 'F' for Female: ").upper()
+print(prefixes(name, gender))
+
+
+# # Write a program that has a user defined function to accept the coefficients of a quadratic equation in variables and calculates its determinant. For example: if the coefficients are stored in the variables a, b, c then calculate determinant as b^2-4ac. Write the appropriate condition to check determinants on positive, zero and negative and output appropriate result.
+def quadratic_Solver(a, b, c):
+    determinant = (b**2) - (4*a*c)
+    return determinant
+
+
+a = int(input("Enter coefficient of x^2: "))
+b = int(input("Enter coefficient of x: "))
+c = int(input("Enter constant term: "))
+print(f"The result of the quadratic equation is {quadratic_Solver(a,b,c)}")
