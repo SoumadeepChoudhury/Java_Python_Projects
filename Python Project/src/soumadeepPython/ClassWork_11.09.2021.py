@@ -89,4 +89,5 @@ def quadratic_Solver(a, b, c):
 a = int(input("Enter coefficient of x^2: "))
 b = int(input("Enter coefficient of x: "))
 c = int(input("Enter constant term: "))
-print(f"The result of the quadratic equation is {quadratic_Solver(a,b,c)}")
+print(
+    f"The determinant of the quadratic equation is {quadratic_Solver(a,b,c)}")
