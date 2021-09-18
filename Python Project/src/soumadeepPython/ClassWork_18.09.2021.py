@@ -1,5 +1,5 @@
 import math  # Globally defined for whole programs set.
-
+import random
 # # Write a program that implements a user defined function that accepts Principal Amount, Rate, Time, Number of Times the interest is compounded to calculate and displays compound interest. (Hint: CI=((P*(1+R/N))NT)
 
 
@@ -31,6 +31,7 @@ print(swaper(num1, num2))
 
 # # Write a program that contains user defined functions to calculate area, perimeter or surface area whichever is applicable for various shapes like square, rectangle, triangle, circle and cylinder. The user defined functions should accept the values for calculation as parameters and the calculated value should be returned. Import the module and use the appropriate functions.
 def square(side):
+    # Math Module is defined at top of this page.
     area = math.pow(side, 2)
     perimeter = math.prod(4, side)
     return area, perimeter
@@ -86,3 +87,56 @@ print(f"The Data from circle :{circle(radius_circle)}")
 radius_cylinder = float(input("Enter radius  of Cylinder: "))
 height_cylinder = float(input("Enter height of Cylinder: "))
 print(f"The Data from Cylinder :{cylinder(radius_cylinder,height_cylinder)}")
+
+
+# ############ HOMEWORK  #################### #
+'''
+Write a program that creates a GK quiz consisting of any five questions of your choice. The questions should be displayed randomly. Create a user defined function score() to calculate the score of the quiz and another user defined function remark(scorevalue) that accepts the final score to display remarks as
+follows:
+Marks Remarks
+5 Outstanding
+4 Excellent
+3 Good
+2 Read more to score more
+1 Needs to take interest
+0 General knowledge will always help you. Take it seriously.
+'''
+questions = ("Who is the Father of our Nation?",
+             "Who was the first President of India?", "Who is known as Father of Indian Constitution?", "Which is the most sensitive organ in our body?", "Giddha is the folk dance of?")
+answers = ("Mahatma Gandhi", "Rajendra Prasad",
+           "B. R. Ambedkar", "Skin", "Punjab")
+remarks = ("General knowledge will always help you. Take it seriously.",
+           "Needs to take interest", "Read more to score more", "Good", "Excellent", "Outstanding")
+scores, question_Done_Number = 0, []
+
+
+def score():
+    print("QUIZ BEGINS.......")
+    global questions, answers, scores
+    while True:
+        if(len(question_Done_Number) == 5):
+            break
+        # Random Module imported at top.
+        question_Number = random.randint(0, 4)
+        if(question_Number not in question_Done_Number):
+            print(questions[question_Number])
+            user_Answer = input("ANSWER: ")
+            if(user_Answer == answers[question_Number]):
+                scores += 1
+            question_Done_Number.append(question_Number)
+        else:
+            continue
+    return scores
+
+
+def remark(scores):
+    global remarks
+    print(f"Your REAMRKS: {remarks[scores]}")
+
+
+start = input("Press Enter to Start the QUIZ......")
+if len(start) == 0:
+    scores = score()
+    remark(scores)
+else:
+    print("Need to Press ENTER.... SORRY! Better Luck Next Time...")
