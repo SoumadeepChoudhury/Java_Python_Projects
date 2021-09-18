@@ -59,7 +59,7 @@ def circle(radius):
 def cylinder(radius, height):
     area = sum(math.prod(2, 3.14, radius, height),
                math.prod(2, 3.14, math.pow(radius, 2)))
-    perimeter = sum(math.pord(4, 3.14, radius), math.prod(2, height))
+    perimeter = sum(math.prod(4, 3.14, radius), math.prod(2, height))
     return area, perimeter
 
 
