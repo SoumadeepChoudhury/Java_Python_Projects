@@ -85,4 +85,4 @@ print(f"The Data from circle :{circle(radius_circle)}")
 
 radius_cylinder = float(input("Enter radius  of Cylinder: "))
 height_cylinder = float(input("Enter height of Cylinder: "))
-print(f"The Data from Triangle :{cylinder(radius_cylinder,height_cylinder)}")
+print(f"The Data from Cylinder :{cylinder(radius_cylinder,height_cylinder)}")
