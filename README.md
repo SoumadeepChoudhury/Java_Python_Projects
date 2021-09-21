@@ -8,7 +8,7 @@
 
   
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/SoumadeepChoudhury/Java_Python_Projects/blob/master/LICENSE)<br />
-[![Follow](https://img.shields.io/twitter/follow/GuitarZonePlus?style=social)](https://img.shields.io/twitter/follow/GuitarZonePlus?style=social)<br />
+[![Follow](https://img.shields.io/twitter/follow/GuitarZonePlus?style=social)](https://twitter.com/GuitarZonePlus)<br />
 [![Follow](https://img.shields.io/badge/Website-Follow-orange)](https://www.ahens.rf.gd)<br />
 
 ## 🔗Links
