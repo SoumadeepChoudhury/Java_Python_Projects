@@ -30,7 +30,48 @@ else:
 
 # # Write a program that rotates the element of a list so that the element at the first index moves to the second index, the element in the second index moves to the third index, etc., and the element in the last index moves to the first index.
 user_List = eval(input("Enter lists of elements"))
-new_List = [user_List[len(user_List)-1]]
+new_List = [user_List[-1]]
+# PROCESS 1
 for i in range(1, len(user_List)):
     new_List.append(user_List[i-1])
+# PROCESS 2
+new_List.extend(user_List)
+new_List.pop(-1)
+
 print(new_List)
+
+
+# # Write a Progarm that reads the n to display nth term of fibonacci series.
+series = [0, 1]
+n = int(input("Enter value of n: "))
+while len(series) <= n:
+    series.append(series[-1]+series[-2])
+print(f"The required nth term is {series[n]}")
+
+
+# # Write programs as per following specifications:
+''' a) Print the length of the longest
+string in the list of strings str_list.
+Precondition : the list will contain
+at least one element.
+
+b) L is a list of numbers. return a new list where each element is the corresponding element of list L summed with number num. '''
+# ANSWER of a)
+str_list = eval(input("Enter list of Strings: "))
+i = 0
+position = 0
+length = 0
+while i < len(str_list):
+    if(len(str_list[i]) > length):
+        length = len(str_list[i])
+        position = i
+    i += 1
+print(f"The longest string in the list is: {str_list[position]}")
+
+
+# ANSWER of b)
+L = eval(input("Enter List of numbers: "))
+num = int(input("Enter value of the number to be added: "))
+for i in range(len(L)):
+    L[i] += num
+print(L)
