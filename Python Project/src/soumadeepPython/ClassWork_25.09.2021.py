@@ -21,7 +21,7 @@ def mult(x, y):
 
 
 def div(x, y):
-    print(x % y)
+    print(x / y)
 
 
 def logarithm(x):
