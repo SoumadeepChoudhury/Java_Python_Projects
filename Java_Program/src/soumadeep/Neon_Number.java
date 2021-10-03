@@ -15,7 +15,7 @@ public class Neon_Number {
         while (squared > 0) {
             int d = squared % 10;
             sum += d;
-            squared /= 100;
+            squared /= 10;
         }
         if (sum == user_Input) {
             System.out.println("It is a Neon Number.");
