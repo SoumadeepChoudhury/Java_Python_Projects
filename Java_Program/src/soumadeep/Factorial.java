@@ -25,7 +25,7 @@ public class Factorial {
 		for (int i = 2; i <= n; i++) {
 			f1 *= i;
 		}
-		System.out.print("\nFactorial: " + f1);
+		System.out.println("\nFactorial: " + f1);
 	}
 
 }
