@@ -13,6 +13,17 @@ print(odd)
 
 
 # # Write a program to read email IDs of n number of students and store them in a tuple. Create two new tuples, one to store only the usernames from the email IDs and second to store domain names from the email ids. Print all three tuples at the end of the program.
+email = tuple()
+usernames = tuple()
+domain = tuple()
+n = int(input("How many email IDs would you like to enter: "))
+for i in range(n):
+    email += (input("Enter email ID: "),)
+    usernames += (email[i].split('@')[0],)
+    domain += (email[i].split('@')[1],)
+print(email)
+print(usernames)
+print(domain)
 
 
 # # Write a program to input names of n students and store them in a tuple. Also, input a name from the user and find if this student is present in the tuple or not.
