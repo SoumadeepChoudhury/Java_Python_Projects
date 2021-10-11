@@ -36,3 +36,62 @@ if(name_Check in names):
     print("Name found in tuple")
 else:
     print("Name not found in tuple")
+
+
+################################ HOMEWORK ##########################
+'''Write a program to take in the roll number, name and percentage of marks for n students of Class X. Write user defined functions to
+    • accept details of the n students(n is the number of students)
+    • search details of a particular student on the basis of roll number and display result
+    • display the result of all the students
+    • find the topper amongst them'''
+name = list()
+roll = list()
+percent = list()
+
+
+def accept_details():
+    for _ in range(int(input("How many student's details you wanna enter ? "))):
+        name.append(input("Enter Student name: "))
+        roll.append(int(input("Enter Roll No: ")))
+        percent.append(float(input("Enter percent: ")))
+
+
+def search_details(roll_No):
+    index = 0
+    for i in range(len(roll)):
+        if roll[i] == roll_No:
+            index = i
+    print(
+        f"Name of Student having roll no {roll_No}: {name[index]} has the percentage {percent[index]}")
+
+
+def display_results():
+    for i in range(len(name)):
+        print(f"Name: {name[i]} Roll No: {roll[i]} Percent: {percent[i]}")
+
+
+def topper_find():
+    topper = percent[0]
+    index = 0
+    for i in range(1, len(percent)):
+        if(topper < percent[i]):
+            topper = percent[i]
+            index = i
+    print(
+        f"The topper is {name[index]} bearing Roll No: {roll[index]} having percentage: {percent[index]}")
+
+
+print("First fill up the details of the student of your Class X ...")
+accept_details()
+
+userChoice = int(input(
+    "1. Wanna search particular student details ?\n2. Wanna display all the students result ?\n3. Wanna find the topper amoung them ?\n4.Exit.\nEnter 1,2,3,4..  "))
+if(userChoice == 1):
+    rollNO = int(input("Enter Roll No of the Student: "))
+    search_details(rollNO)
+elif(userChoice == 2):
+    display_results()
+elif(userChoice == 3):
+    topper_find()
+else:
+    exit()
