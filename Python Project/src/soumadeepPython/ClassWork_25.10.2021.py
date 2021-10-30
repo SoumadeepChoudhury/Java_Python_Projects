@@ -20,3 +20,16 @@ for _ in range(10):
     userInp = int(input("Enter value: "))
     tup += (userInp,)
 print(tup)
+
+
+# # WAP accept name roll no and marks of 10 students in nested tuple and display them in tabular format.
+studDetail = tuple()
+for _ in range(10):
+    rollNo = int(input("Enter Roll No: "))
+    name = input("Enter Name: ")
+    marks = int(input("Enter Marks: "))
+    studDetail += ((rollNo, name, marks),)
+print("S_No", " Roll_No", " Name", " Marks")
+for i in range(0, len(studDetail)):
+    print((i+1), '\t', studDetail[i][0], '\t',
+          studDetail[i][1], '\t', studDetail[i][2])
