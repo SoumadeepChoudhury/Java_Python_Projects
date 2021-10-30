@@ -16,9 +16,7 @@ print(newWord)
 
 # # Assign in tuples.
 tup = tuple()
-li = []
 for _ in range(10):
     userInp = int(input("Enter value: "))
-    li.append(userInp)
-tup = tuple(li)
+    tup += (userInp,)
 print(tup)
