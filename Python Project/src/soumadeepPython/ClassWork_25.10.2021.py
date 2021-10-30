@@ -12,3 +12,13 @@ for i in range(0, len(userInp)):
     if userInp[i] == " ":
         newWord += userInp[i+1]
 print(newWord)
+
+
+# # Assign in tuples.
+tup = tuple()
+li = []
+for _ in range(10):
+    userInp = int(input("Enter value: "))
+    li.append(userInp)
+tup = tuple(li)
+print(tup)
