@@ -19,3 +19,39 @@ while(user_Inp > 0):
     user_Inp //= 10
 l = l[::-1]
 print(' '.join([i for i in l]))
+
+
+# # Write a program that repeatedly asks the user to enter product names and prices. Store all of these in a dictionary keys are the product names and whose values are the prices. When the user is done entering products and prices, allow them to repeatedly enter a product name and print the corresponding  price or a message if the product is not in the dictionary.
+productItems = {}
+while True:
+    name, price = input("Enter name: "), float(
+        input("Enter price of the product: "))
+    productItems[name] = price
+    if(input("Do you want to enter more products name ? Y/N").lower() == 'n'):
+        break
+while True:
+    nameCheck = input("Enter product name: ")
+    print(f"The Price of  {nameCheck} is : {productItems[nameCheck]}" if nameCheck in productItems.keys(
+    ) else "Not in the list of items. Try another items.")
+    if(input("Do you check more products name ? Y/N").lower() == 'n'):
+        break
+
+
+'''Create a dictionary with keys are month names and whose values are the number of days in the corresponding month.
+a) Ask the user to enter a month name and use a dictionary to tell how many days are in a month.
+b) Print out all the keys in the alphabetical order.
+c) Print out all of the months with 31 days.
+d) Print out the (key-value) pairs sorted by the number of days in each month.
+'''
+monthDays = {'January': 31, 'February': 28, 'March': 31, 'April': 30, 'May': 31, 'June': 30,
+             'July': 31, 'August': 31, 'September': 30, 'October': 31, 'November': 30, 'December': 31}
+month = input("Enter month name: ")
+print(
+    f"The number of months in {month} is {monthDays[month] if month in monthDays else 'Not Found'}")
+print(sorted(monthDays, reverse=False))
+
+for i in monthDays:
+    if(i[1] == 31):
+        print(i)
+sort = sorted([(i, j) for j, i in monthDays.items()])
+print([(i, j) for i, j in sort])
