@@ -57,7 +57,6 @@ sort = sorted([(i, j) for j, i in monthDays.items()])
 print([(i, j) for i, j in sort])
 
 
-<<<<<<< HEAD
 # # Given the dictionary x = {'k1':'v1','k2':'v2','k3':'v3'}, create a dictionary with the opposite mapping that is written writer program to create the dictionary as: inverted_x = {'v1':'k1','v2':'k2','v3':'k3'}
 x = {'k1': 'v1', 'k2': 'v2', 'k3': 'v3'}
 keys = list(x.keys())
@@ -97,34 +96,15 @@ for i in values:
     if x != i and values.count(i) > 1:
         print(f"{values.count(i)} keys have same values")
     x = i
-=======
-
-# # Write a program that checks if two same values in a dictionary have different keys. That is, for dictionary D1 = { ‘a’ : 10, ‘b': 20, ‘c’ : 10}, the program should print “2 keys have same values” and for dictionary D2 = { ‘a’ : 10, ‘b’ : 20, ‘c’ : 30} , the program should print “No keys have same values”.
-D1 = { 'a' : 10, 'b': 20, 'c' : 10}
-values=list(D1.values())
-x="000"
-for i in values:
-    if x!=i and values.count(i) > 1:
-        print(f"{values.count(i)} keys have same values")
-    x=i
-
->>>>>>> 9fc47f0f9144106f9f52504924f6c9927c5df689
 
 
 # # WAP to check if a dictionary is contained in another dictionary.
 # # d1 = {1:11,2:12}
 # # d2 = {1:11,2:12,3:13,4:15} ........... Therefore d1 is contained in d2.
-<<<<<<< HEAD
 d1 = {1: 11, 2: 12}
 d2 = {1: 11, 2: 12, 3: 13, 4: 15}
 d1Pairs = list(d1.items())
 d2Pairs = list(d2.items())
-=======
-d1 = {1:11,2:12}
-d2 = {1:11,2:12,3:13,4:15}
-d1Pairs=list(d1.items())
-d2Pairs=list(d2.items())
->>>>>>> 9fc47f0f9144106f9f52504924f6c9927c5df689
 for i in d1Pairs:
     if i in d2Pairs:
         print("First Dictionary is contained in another Dictionary")
@@ -132,7 +112,6 @@ for i in d1Pairs:
 
 
 # # A dictionary has values in the form of list of numbers. Write a program to create a new dictionary D2 having same keys as D1 but values as the sum of the list elements.
-<<<<<<< HEAD
 D1 = {'A': [1, 2, 3], 'B': [4, 5, 6]}
 values = list(D1.values())
 D2 = {}
@@ -140,12 +119,3 @@ keys = list(D1.keys())
 for i in range(len(keys)):
     D2[keys[i]] = sum(values[i])
 print(D2)
-=======
-D1 = {'A':[1,2,3],'B':[4,5,6]}
-values=list(D1.values())
-D2={}
-keys=list(D1.keys())
-for i in range(len(keys)):
-    D2[keys[i]]=sum(values[i])
-print(D2)
->>>>>>> 9fc47f0f9144106f9f52504924f6c9927c5df689
