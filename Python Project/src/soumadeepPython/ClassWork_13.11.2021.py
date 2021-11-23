@@ -61,7 +61,7 @@ print(
 print(sorted(monthDays, reverse=False))
 
 for i in monthDays:
-    if(i[1] == 31):
+    if(monthDays[i]== 31):
         print(i)
 sort = sorted([(i, j) for j, i in monthDays.items()])
 print([(i, j) for i, j in sort])
