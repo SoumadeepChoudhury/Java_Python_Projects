@@ -6,9 +6,11 @@ t = 0
 d = 0
 z = 1
 for i in range(user_Inp):
+    if(t == 21):
+        t, z, d = 0, 1, 0
     t = t+d
     d = d+1
-    if(i <= 3):
+    if(t <= 6):
         print(li[t])
     else:
         print(li[t - 7*z])
