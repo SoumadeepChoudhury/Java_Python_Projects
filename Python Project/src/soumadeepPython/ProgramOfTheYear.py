@@ -33,17 +33,19 @@ for k in range(len(input_list)-1):
             input_list[i+1] = x
 
 # Age Sort
-for i in range(len(input_list)-1):
-    if(input_list[i][0] == input_list[i+1][0] and input_list[i][1] > input_list[i+1][1]):
-        x = input_list[i]
-        input_list[i] = input_list[i+1]
-        input_list[i+1] = x
+for k in range(len(input_list)-1):
+    for i in range(len(input_list)-1):
+        if(input_list[i][0] == input_list[i+1][0] and input_list[i][1] > input_list[i+1][1]):
+            x = input_list[i]
+            input_list[i] = input_list[i+1]
+            input_list[i+1] = x
 
 # Height Sort
-for i in range(len(input_list)-1):
-    if(input_list[i][0] == input_list[i+1][0] and input_list[i][1] == input_list[i+1][1] and input_list[i][2] > input_list[i+1][2]):
-        x = input_list[i]
-        input_list[i] = input_list[i+1]
-        input_list[i+1] = x
+for k in range(len(input_list)-1):
+    for i in range(len(input_list)-1):
+        if(input_list[i][0] == input_list[i+1][0] and input_list[i][1] == input_list[i+1][1] and input_list[i][2] > input_list[i+1][2]):
+            x = input_list[i]
+            input_list[i] = input_list[i+1]
+            input_list[i+1] = x
 
 print(input_list)
