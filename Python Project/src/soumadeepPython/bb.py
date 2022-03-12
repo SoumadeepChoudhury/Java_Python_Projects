@@ -34,8 +34,8 @@ CDE
 DE
 E
 '''
-str = "ABCDE"
-for i in range(len(str)):
-    for j in range(i, len(str)):
-        print(str[j], end=' ')
+userInp = int(input("Enter no of rows: "))
+for i in range(65, 65+userInp):
+    for j in range(i, 65+userInp):
+        print(chr(j), end=' ')
     print()
