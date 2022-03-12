@@ -25,3 +25,17 @@ for i in userInp:
             maxVowel = temp
             word = i
 print(word)
+
+
+'''
+ABCDE
+BCDE
+CDE
+DE
+E
+'''
+str = "ABCDE"
+for i in range(len(str)):
+    for j in range(i, len(str)):
+        print(str[j], end=' ')
+    print()
