@@ -11,3 +11,17 @@ userInp = input("Enter sentence: ").split(" ")
 for i in range(len(userInp)):
     userInp[i] = userInp[i][::-1]
 print(' '.join(map(str, userInp)))
+
+
+# WAP accept a sentence display the word that has max vowel.
+userInp = input("Enter sentence: ").split(" ")
+maxVowel = 0
+for i in userInp:
+    temp = 0
+    for s in i:
+        if s in 'aeiouAEIOU':
+            temp += 1
+        if temp > maxVowel:
+            maxVowel = temp
+            word = i
+print(word)
