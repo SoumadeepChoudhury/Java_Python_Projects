@@ -3,5 +3,5 @@ UserList = eval(input("Enter 15 words in a list: "))
 for i in UserList:
     if i == i[::-1]:
         print(f"{i} is a palindrome word")
-    if i[0] == i[-1]:
+    elif i[0] == i[-1]:
         print(f"{i} is a special word")
