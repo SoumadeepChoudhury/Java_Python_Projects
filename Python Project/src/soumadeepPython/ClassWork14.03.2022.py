@@ -17,7 +17,7 @@
 
 
 # WAP input a string. Print the new string after converting every alternate letter to uppercase and next immidiate letter in lower case. Special character remains same
-UserInp = input("Enter string: ")
+UserInp = input("Enter string: ").strip()
 ft = UserInp[0].isupper()
 print(UserInp[0], end="")
 if ft:
