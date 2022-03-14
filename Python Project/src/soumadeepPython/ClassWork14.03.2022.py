@@ -9,3 +9,8 @@ for i in UserList:
         special.append(i)
 print(i for i in palindrome)
 print(i for i in special)
+
+# WAP accept a string in uppercase.Convert all letters of the word other than the first letter to lowercase. Display the new string...
+userInp = input("Enter a String in uppercase: ").upper().split(" ")
+for i in userInp:
+    print(i[0]+i[1:].lower(), end=" ")
