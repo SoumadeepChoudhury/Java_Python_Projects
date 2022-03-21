@@ -46,4 +46,4 @@ for i in range(len(userInp)):
             count += 1
             print(userInp[i], end=" ")
             break
-print(f"No of words are {count}")
+print(f"\nNo of words are {count}")
