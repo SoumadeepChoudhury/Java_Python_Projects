@@ -40,3 +40,10 @@ for i in range(len(userInp)):
         userInp = userInp.replace(userInp[i], vowel[vowel.index(
             userInp[i])+1 if userInp[i] != 'U' else 0])
 print(userInp)
+
+# WAP accept ten names and print those names which starts with given letter by user.
+userInpList = eval(input("Enter 10 names: "))
+char = input("Enter character: ")
+for i in userInpList:
+    if i[0] == char:
+        print(i)
