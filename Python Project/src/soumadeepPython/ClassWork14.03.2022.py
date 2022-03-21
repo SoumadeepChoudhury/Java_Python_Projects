@@ -37,10 +37,13 @@ else:
         if UserInp.index(i) % 2 != 0:
             print(i.upper(), end="")
 
-# WAP to print the word that has at least one consecutive pair of alphabets. Eg: MODEM IS AN ELECTRONIC DEVICE should output as MODEM and DEVICE
+# WAP to count and print the word that has at least one consecutive pair of alphabets. Eg: MODEM IS AN ELECTRONIC DEVICE should output as MODEM and DEVICE and print 2
 userInp = input("Enter sentence: ").strip().upper().split(" ")
+count = 0
 for i in range(len(userInp)):
     for j in range(len(userInp[i])-1):
         if chr(ord(userInp[i][j])+1) == userInp[i][j+1]:
+            count += 1
             print(userInp[i], end=" ")
             break
+print(f"No of words are {count}")
