@@ -30,3 +30,13 @@ for i in userInp:
         count = userInp.count(i)
         char = i
 print(char)
+
+
+# WAP accept a sentence in uppercase and change the each vowel with next vowel.
+userInp = input("Enter sentence: ").upper()
+vowel = ['A', 'E', 'I', 'O', 'U']
+for i in range(len(userInp)):
+    if userInp[i] in vowel:
+        userInp = userInp.replace(userInp[i], vowel[vowel.index(
+            userInp[i])+1 if userInp[i] != 'U' else 0])
+print(userInp)
