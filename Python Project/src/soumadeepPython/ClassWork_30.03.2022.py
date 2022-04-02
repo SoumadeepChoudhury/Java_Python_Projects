@@ -45,3 +45,13 @@ for i in userList:
         temp = len(i)
         word = i
 print(word)
+
+
+# Write a function called addDict(dict1,dict2) which computes the union of two dictionaries. It should return a new dictionary, with all the items in both it's arguments(assumed to be dictionaries).If the same key appears in both arguments, feel free to pick a value from either.
+def addDict(dict1, dict2):
+    newDict = {}
+    for i in dict1.keys():
+        newDict[i] = dict1[i]
+    for i in dict2.keys():
+        newDict[i] = dict2[i]
+    return newDict
