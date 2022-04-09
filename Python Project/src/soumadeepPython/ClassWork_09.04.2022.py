@@ -4,7 +4,7 @@ monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
               "JULY", "AUGUST", "SEPTEMBER",   "OCTOBER", "NOVEMBER", "DECEMBER"]
 
 
-def leapYear(userYear):
+def leapYear(userYear: int) -> bool:
     global monthDays
     if (userYear % 400 == 0 or userYear % 4 == 0):
         monthDays[1] = 29
@@ -13,7 +13,7 @@ def leapYear(userYear):
         return False
 
 
-def dateComp(userdayNum, userYear):
+def dateComp(userdayNum: int, userYear: int):
     _ = leapYear(userYear)
     global monthNames, monthDays
     date = 0
@@ -49,3 +49,39 @@ else:
         afterdayNum - +365
     print("The required later-date: ", end='')
     dateComp(afterdayNum, afteryear)
+
+
+# A smith number is a composite number, the sum of whose digits is the sum of the digits of it's prime factors obtained as a result of prime factorisation. eg: 666
+userNum = int(input("Enter num: "))
+sumOfPrime = 0
+sumOfDigit = 0
+tempNum = userNum
+i = 1
+runs = 0
+while tempNum > 0:
+    sumOfDigit += tempNum % 10
+    tempNum //= 10
+while userNum > 0:
+    count_ = 1
+    if userNum % i == 0:
+        for j in range(1, i):
+            if i % j == 0:
+                count_ += 1
+        if count_ == 2:
+            tempNum = i
+            while tempNum > 0:
+                sumOfPrime += tempNum % 10
+                tempNum //= 10
+            userNum //= i
+            i = 2
+            if sumOfDigit == sumOfPrime:
+                print("Smith Number")
+                runs = 1
+                break
+        else:
+            i += 1
+    else:
+        i += 1
+
+if runs == 0:
+    print("Not Smith Number")
