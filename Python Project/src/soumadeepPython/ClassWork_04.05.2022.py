@@ -1,6 +1,7 @@
 # WAP that inputs a main string and then creates an encrypted string by embedding a short symbol based after each character.The program should also be able to produce the decrypt string from the encrypted string.
 from random import randint
-ENCKEYLIST = "!@#$%^&*()_+="
+import string
+ENCKEYLIST = string.punctuation
 rangeStart, rangeEnd = 0, 0
 while (rangeEnd <= rangeStart):
     rangeStart = randint(0, 12)
