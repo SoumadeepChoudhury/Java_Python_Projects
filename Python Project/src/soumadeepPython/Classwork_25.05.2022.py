@@ -18,6 +18,7 @@ def DISPLAYWORDS():
     file = open("STORY.txt", "r")
     text = file.readlines()
     for i in text:
+        i.replace("\n", "")
         for j in i:
-            if len(j) < 6:
+            if len(j) < 4:
                 print(j)
