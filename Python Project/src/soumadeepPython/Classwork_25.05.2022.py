@@ -1,3 +1,6 @@
+# Sumita Arora Class 12
+
+# Q6 Pg: 253
 fileInp = open("Article.txt", "a+")
 fileInp.write("Hello World")
 text = fileInp.read()
@@ -7,3 +10,13 @@ for i in text:
         count += 1
 print("Number of upper case characters: ", count)
 fileInp.close()
+
+# Q9 Pg: 253
+
+
+def DISPLAYWORDS():
+    file = open("STORY.txt", "r")
+    text = file.readlines()
+    for i in text:
+        if len(i) < 6:
+            print(i)
