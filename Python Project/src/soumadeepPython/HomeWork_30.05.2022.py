@@ -43,6 +43,21 @@ file = open("file.txt").read()
 charcount = file.index('$')
 print(charcount)
 
+# Write a program that counts the number alphabets and digits of characters up to the first $ in a text file.
+countalpha, countdigit = 0, 0
+file = open("tt.txt").read()
+if '$' in file:
+    substring = file[:file.index('$')]
+    for i in substring:
+        if i.isalpha():
+            countalpha += 1
+        elif i.isdigit():
+            countdigit += 1
+else:
+    print("$ Not Found")
+print(f"No. of digits: {countdigit}")
+print(f"No. of alphabets: {countalpha}")
+
 
 # Write a program that will create an object called filout for writing, associate it with the filename STRS.txt. The code should keep on writing strings to it as long as the user wants.
 while True:
