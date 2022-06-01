@@ -58,19 +58,6 @@ else:
 print(f"No. of digits: {countdigit}")
 print(f"No. of alphabets: {countalpha}")
 
-# Updated in another style
-file = open("file.txt").read()
-c1, c2, c = 0, 0, 0
-for i in file:
-    if i == '$':
-        break
-    elif(i.isalpha()):
-        c1 += 1
-    elif(i.isdigit()):
-        c2 += 1
-print("Alpha: ", c1)
-print("Digit: ", c2)
-
 # Write a program that will create an object called filout for writing, associate it with the filename STRS.txt. The code should keep on writing strings to it as long as the user wants.
 while True:
     with open("STRS.txt", "a") as filout:
