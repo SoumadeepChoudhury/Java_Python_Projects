@@ -45,7 +45,7 @@ print(charcount)
 
 # Write a program that counts the number alphabets and digits of characters up to the first $ in a text file.
 countalpha, countdigit = 0, 0
-file = open("tt.txt").read()
+file = open("file.txt").read()
 if '$' in file:
     substring = file[:file.index('$')]
     for i in substring:
@@ -61,7 +61,7 @@ print(f"No. of alphabets: {countalpha}")
 
 # Write a program that will create an object called filout for writing, associate it with the filename STRS.txt. The code should keep on writing strings to it as long as the user wants.
 while True:
-    with open("file.txt", "a") as filout:
+    with open("STRS.txt", "a") as filout:
         userInput = input("Enter String or 0 to discontinue: ")
         if userInput == 0:
             break
@@ -70,7 +70,7 @@ while True:
 
 # Write a function Show_words() in python to read the content of a text file ‘NOTES.TXT’ and display only such lines of the file which have exactly 5 words in them.
 def Show_words():
-    file = open("tt.TXT")
+    file = open("NOTES.TXT")
     line = True
     while line:
         line = file.readline()
