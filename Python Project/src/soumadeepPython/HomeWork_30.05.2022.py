@@ -109,3 +109,72 @@ while True:
         lowerFile.write(userChar)
     else:
         othersFile.write(userChar)
+
+
+################ BINARY FILES ################
+
+
+# A file sports.dat contains information in following format : Event ~ Participant. Write a function that would read contents from file sports.dat and creates a file named Atheletic.dat copying only those records from sports.dat where the event name is “Atheletics”.
+import pickle
+def ReadWriteDat():
+    sportsFile = open("sports.dat", "rb")
+    try:
+        with open("Atheletic.dat","wb") as newFile:
+            while True:
+                lines = pickle.load(sportsFile)
+                if lines["Event"] == "Atheletics":
+                    pickle.dump(lines,newFile)
+    except EOFError:
+        sportsFile.close()
+
+
+# A file contains a list of telephone numbers in the following form:
+#                           Arvind 7258031
+#                           Sachin 7259197
+# The names contain only one word the names and telephone numbers are separated by white spaces Write program to read a file and display its contents in two columns.
+telephoneFile = open("telephone.txt", "r")
+line = " "
+while line:
+    line = telephoneFile.readline().split()
+    try:
+        if line[0] != "" or line != " ":
+            print(line[0]+'|'+line[1])
+    except:
+        break
+
+
+# Consider the following definition of dictionary Member, write a method in python to write the content in a pickled file member.dat.
+#                       Member = {'MemberNo.': _____, 'Name': _____}
+import pickle
+def Members():
+    Member={'MemberNo':1,'Name':"BB Roy"}
+    with open("member.dat","wb") as member:
+        pickle.dump(Member,member)
+
+
+# Consider the following definition of dictionary Staff, write a method in python to search and display the content in a pickled file staff.dat, where Staffcode key of the dictionary is matching with 'S0105'
+#                          Staff = {'Staffcode":_____ 'Name' = _________}
+import pickle
+def Staffs():
+    staffsFile = open("staff.dat", "rb")
+    try:
+        while True:
+            Staff = pickle.load(staffsFile)
+            if Staff['Staffcode']=='S0105':
+                print(f"Name of the staff having code S0105 is {Staff['Name']}")
+    except EOFError:
+        staffsFile.close()
+
+
+# Considering the following definition of dictionary COMPANY, Write a method in Python to search and display the content in a pickled file COMPANY.DAT, where CompID key of the dictionary is matching with the value '1005'.
+#                       Company = {'CompID' = ____, 'CName' = ____, ‘Turnover’ = ____}
+import pickle
+def Companys():
+    companyFile = open("COMAPNY.DAT", "rb")
+    try:
+        while True:
+            Company = pickle.load(companyFile)
+            if Company['ComID']=='1005':
+                print(f"CName : {Company['CName']}\nTurnover : {Company['Turnover']}")
+    except EOFError:
+        companyFile.close()
