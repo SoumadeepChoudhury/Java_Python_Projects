@@ -178,3 +178,56 @@ def Companys():
                 print(f"CName : {Company['CName']}\nTurnover : {Company['Turnover']}")
     except EOFError:
         companyFile.close()
+
+
+
+########################### CSV Files #############################
+
+# WAP to read a given CSV file having tab delimiter.
+import csv
+file=open('file.csv','r',newline='')
+reader=csv.reader(file,delimiter='\t')
+for rec in reader:
+    print(rec)
+
+
+
+# Write a Python program to write a nested Python list to a csv file in one go. After writing the CSV read the CSV file and display the content.
+import csv
+lst=eval(input("Enter a nested list: "))
+with open("file.csv",'w',newline='') as csvf:
+    writer=csv.writer(csvf)
+    writer.writerows(lst)
+
+with open("file.csv","r",newline='') as cvf:
+    reader=csv.reader(cvf)
+    for rec in reader:
+        print(rec)
+
+
+# Write a function that reads a csv file and creates another csv file with the same content, but with a different delimeter.
+def Transformer():
+    import csv
+    lst=[]
+    with open("file1.csv","r",newline='') as cnf:
+        reader=csv.reader(cnf)
+        for i in reader:
+            lst.append(i)
+    with open("file2.csv","w",newline='') as cnf:
+        writer=csv.writer(cnf,delimiter='|')
+        writer.writerows(lst)
+
+
+# Write a function that reads a csv file and creates another csv file with the same content except the lines begining with 'check'.
+def TransformerRepeater():
+    import csv
+    lst=[]
+    with open("file1.csv","r",newline='') as cnf:
+        reader=csv.reader(cnf)
+        for i in reader:
+            lst.append(i)
+    with open("file2.csv","w",newline='') as cnf:
+        writer=csv.writer(cnf,delimiter='|')
+        for i in lst:
+            if "check" not in i[0]:
+                writer.writerow(i)
