@@ -20,11 +20,18 @@ print(count,"no of words")
 ## WAP to display details the roll no from a dat file
 import pickle
 file=open(input("Enter name of .dat file with extension : "),"rb")
+while True:
+    name=input("Enter Name: ")
+    Class=input("Enter Class")
+    ROll=input("Enter Roll: ")
+    pickle.dump({"Name":name,"Class":Class,"Roll":ROll})
+    if input("Wanna enter more? Y/N")=='N':
+        break
 rollNo=int(input("Enter Roll No to search: "))
 try:
     while True:
         data=pickle.load(file)
-        if data["roll"]==rollNo:
+        if data["Roll"]==rollNo:
             print(data)
 except EOFError:
     file.close()
