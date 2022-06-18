@@ -16,3 +16,15 @@ elif ".txt" in file:
             count+=1
             print(words)
 print(count,"no of words")
+
+## WAP to display details the roll no from a dat file
+import pickle
+file=open(input("Enter name of .dat file with extension : "),"rb")
+rollNo=int(input("Enter Roll No to search: "))
+try:
+    while True:
+        data=pickle.load(file)
+        if data["roll"]==rollNo:
+            print(data)
+except EOFError:
+    file.close()
