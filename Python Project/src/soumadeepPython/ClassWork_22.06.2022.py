@@ -29,19 +29,21 @@ Formula to Calculate Volume
 # CalVolume() to calculate Volume
 - ShowContainer() # To display Radius, Height, Type
 # Volume of the Container'''
-RADIUS,HEIGHT,TYPE,VOLUME=0,0,0,0
-def CallVolume(Type,Radius,Height):
-    global VOLUME
-    if Type==1:
-        VOLUME=3.14*Radius*Height
-    elif Type==2:
-        VOLUME=3.14*Radius*(Height/3)
-def GetValue():
-    Radius=int(input("Enter radius: "))
-    Height=int(input("Enter Height: "))
-    Type=int(input("Enter Type: "))
-    CallVolume(Type,Radius,Height)
-def ShowContainer():
-    global RADIUS,HEIGHT,TYPE,VOLUME
-    print(TYPE,RADIUS,HEIGHT,VOLUME)
-GetValue()
+class CONTAINER:
+    def __init__(self) -> None:
+        self.RADIUS,self.HEIGHT,self.TYPE,self.VOLUME=0,0,0,0
+    def CallVolume(self,Type,Radius,Height):
+        if Type==1:
+            self.VOLUME=3.14*Radius*Height
+        elif Type==2:
+            self.VOLUME=3.14*Radius*(Height/3)
+        self.ShowContainer()
+    def GetValue(self):
+        self.RADIUS=int(input("Enter radius: "))
+        self.HEIGHT=int(input("Enter Height: "))
+        self.TYPE=int(input("Enter Type: "))
+        self.CallVolume(self.TYPE,self.RADIUS,self.HEIGHT)
+    def ShowContainer(self):
+        print(self.TYPE,self.RADIUS,self.HEIGHT,self.VOLUME)
+Object = CONTAINER()
+Object.GetValue()
