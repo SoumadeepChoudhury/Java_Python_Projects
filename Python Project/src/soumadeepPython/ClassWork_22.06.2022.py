@@ -2,9 +2,10 @@
 userInput=""
 while userInput!="END":
     userInput=input("Enter string/sentence: ")
-    with open("file.txt","a") as file:
-        file.write(userInput)
-with open("file.txt",'r') as file:
+    with open("tt.txt","a") as file:
+        if userInput!="END":
+            file.write(userInput+'\n')
+with open("tt.txt",'r') as file:
     for line in file:
         if line[0].isupper():
             print(line)
