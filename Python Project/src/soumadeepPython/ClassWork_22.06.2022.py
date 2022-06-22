@@ -10,7 +10,7 @@
 #         if line[0].isupper():
 #             print(line)
 
-'''Write a program CONTAINER in Python with the following specifications :
+'''Write a class CONTAINER in Python with the following specifications : Instance attributes
 - Radius,Height # Radius and Height of Container
 - Type # Type of Container
 - Volume # Volume of Container
@@ -32,17 +32,17 @@ Formula to Calculate Volume
 class CONTAINER:
     def __init__(self) -> None:
         self.RADIUS,self.HEIGHT,self.TYPE,self.VOLUME=0,0,0,0
-    def CallVolume(self,Type,Radius,Height):
-        if Type==1:
-            self.VOLUME=3.14*Radius*Height
-        elif Type==2:
-            self.VOLUME=3.14*Radius*(Height/3)
+    def CallVolume(self):
+        if self.TYPE==1:
+            self.VOLUME=3.14*self.RADIUS*self.HEIGHT
+        elif self.TYPE==2:
+            self.VOLUME=3.14*self.RADIUS*(self.HEIGHT/3)
         self.ShowContainer()
     def GetValue(self):
         self.RADIUS=int(input("Enter radius: "))
         self.HEIGHT=int(input("Enter Height: "))
         self.TYPE=int(input("Enter Type: "))
-        self.CallVolume(self.TYPE,self.RADIUS,self.HEIGHT)
+        self.CallVolume()
     def ShowContainer(self):
         print(self.TYPE,self.RADIUS,self.HEIGHT,self.VOLUME)
 Object = CONTAINER()
