@@ -50,6 +50,6 @@
 
 # Write a method in Python to read lines from a text file INDIA.TXT, to find and display the occurrence of the word ‘‘India’’.
 def reader():
-    file=open("tt.txt").read()
+    file=open("India.txt").read()
     print(file.count("India"))
 reader()
