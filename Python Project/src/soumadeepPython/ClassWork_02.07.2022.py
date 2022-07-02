@@ -10,6 +10,6 @@ while True:
 file.close()
 
 # WAP to read first 5 lines from the text file.
-file=open("tt.txt")
+file=open("file.txt")
 for i in range(5):
     print(file.readline())
