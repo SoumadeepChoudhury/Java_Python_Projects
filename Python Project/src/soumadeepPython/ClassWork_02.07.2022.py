@@ -3,7 +3,7 @@ file=open("file.txt","a")
 while True:
     fileinput=input("Enter text: ")
     if fileinput.endswith('~'):
-        file.write(fileinput[:len(fileinput)-1])
+        file.write(fileinput[:len(fileinput)])
         break
     else:
         file.write(fileinput)
