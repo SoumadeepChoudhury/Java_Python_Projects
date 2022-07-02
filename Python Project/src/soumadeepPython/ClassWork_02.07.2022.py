@@ -15,10 +15,8 @@ for i in range(5):
     print(file.readline())
 
 # WAP to combine each line from first file with the corresponding line of second file.
-file1=open("file1.txt")
-file2=open("file2.txt")
+file1=open("tt.txt")
+file2=open("tt1.txt")
 string=" "
-while string=="":
-    string=file1.readline()
-    string+=file2.readline()
-    print(string)
+for i,j in file1,file2:
+    print(i.replace("\n","")+" "+j.replace("\n",""))
