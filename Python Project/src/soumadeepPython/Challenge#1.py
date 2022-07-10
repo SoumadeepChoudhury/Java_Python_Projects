@@ -1,7 +1,7 @@
 # write a function in python that will return  a pattern of Pascal's triangle and write it in a .txt file......user should input the file name as PASCAL'S.TXT and range of the pattern should be decided by the user.....
 def pascal()->str:
     pasno=1
-    file=open("tt.TXT",'a')
+    file=open("PASCAL'S.TXT",'a')
     line=''
     rows=int(input("Enter no of rows: "))
     for i in range(rows):
@@ -15,3 +15,4 @@ def pascal()->str:
             line+='\n'
             pasno=pasno*11
     file.write(line)
+    return (line+'\nSuccessfully Added in file')
