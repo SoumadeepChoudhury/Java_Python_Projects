@@ -33,5 +33,5 @@ print(li)
 li=[1,2,3,
     4,5,6,
     7,8,9]
-sum=int(f"{li[1]}{li[4]}{li[7]}")+int(f"{li[3]}{li[4]}{li[5]}")
+sum=li[1]+li[4]+li[7]+li[3]+li[4]+li[5]
 print(sum)
