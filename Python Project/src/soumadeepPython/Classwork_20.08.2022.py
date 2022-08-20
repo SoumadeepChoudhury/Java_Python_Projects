@@ -19,3 +19,12 @@ x1,x2,x3=li[0],li[1],li[2]
 li[0],li[1],li[2]=li[4],li[5],li[6]
 li[4],li[5],li[6]=x1,x2,x3
 print(li)
+
+# exchange element with 1st row with last row in 3X3 matrix.
+li=[[1,2],[3,4],[5,6],
+    [7,8],[9,10],[11,12],
+    [13,14],[15,16],[17,18]]
+x1,x2,x3=li[0],li[1],li[2]
+li[0],li[1],li[2]=li[6],li[7],li[8]
+li[6],li[7],li[8]=x1,x2,x3
+print(li)
