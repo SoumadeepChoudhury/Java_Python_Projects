@@ -59,5 +59,19 @@ def transpose():
             temp.append(itemSet[i])
         outputList.append(temp)
     for i in range(0,len(outputList)):
-        print(outputList[i])
-transpose()
+        for j in outputList[i]:
+            print(j,end=' ')
+        print()
+'''
+#4) Element contains of list L is 1,2,3. Write a function transfer() that will transfer the element of the list L in  a 2-D List of 3 by 3 in such a way that...the RESULTANT 2-D list will be like.....:::::
+                                                          1    2    3
+                                                           1    2   0
+                                                           1    0   0....
+DISPLAY THE 2-D LIST AFTER BEING TRANFERED IN MATRIX FORMAT....
+'''
+def transfer():
+    userInp=eval(input("Enter a List of 3 elements: "))
+    for i in range(0,len(userInp)):
+        for j in range(0,len(userInp)-i):
+            print(userInp[j],end=' ')
+        print('0 '*i)
