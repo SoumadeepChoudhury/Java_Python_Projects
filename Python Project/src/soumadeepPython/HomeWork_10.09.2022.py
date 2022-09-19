@@ -36,4 +36,4 @@ elif percentage>80 and percentage<90:
 elif percentage>90:
     grade='A+'
 
-print(f"Name: {name}\t\t\t\tClass: {class_}\nFather's Name: {father_name}\t\tMother's Name: {mother_name}\nDate of Birth: {dob}\nEnglish: {eng}\nHindi: {hindi}\nScience: {science}\n Social Studies: {sst}\nMathematics: {math}\nTotal Marks: {total_marks}\nPercentage: {percentage}\nOverall Grade: {grade}")
+print(f"_____________REPORT CARD______________\nName: {name}\t\t\t\tClass: {class_}\nFather's Name: {father_name}\t\tMother's Name: {mother_name}\nDate of Birth: {dob}\nEnglish: {eng}\nHindi: {hindi}\nScience: {science}\nSocial Studies: {sst}\nMathematics: {math}\nTotal Marks: {total_marks}\nPercentage: {percentage}\nOverall Grade: {grade}")
