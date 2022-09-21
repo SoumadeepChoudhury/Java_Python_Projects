@@ -2,11 +2,8 @@
 import math
 user_inp=int(input("Enter No: "))
 tem_var=user_inp
-count=0
+count=len(str(user_inp))
 addVal=0
-while tem_var>0:
-    count+=1
-    tem_var//=10
 tem_var=user_inp
 while tem_var>0:
     d_=tem_var%10
