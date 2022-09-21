@@ -1,5 +1,4 @@
 # Armstrong number of any order.
-import math
 user_inp=int(input("Enter No: "))
 tem_var=user_inp
 count=len(str(user_inp))
@@ -8,7 +7,7 @@ tem_var=user_inp
 while tem_var>0:
     d_=tem_var%10
     tem_var//=10
-    addVal=addVal+int(math.pow(d_,count))
+    addVal=addVal+(d_**count)
 if addVal==user_inp:
     print("Armstrong Number")
 else:
