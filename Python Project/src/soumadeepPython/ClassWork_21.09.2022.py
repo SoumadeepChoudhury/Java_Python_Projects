@@ -23,18 +23,17 @@ userinp2=int(input("Enter No.2 : "))
 sum1=0
 sum2=0
 if userinp1>userinp2:
-    for i in range(1,userinp1//2+1):
-        if userinp1%i==0:
-            sum1+=i
-        if userinp2%i==0:
-            sum2+=i
+    temp1=userinp1
+    temp2=userinp2
 else:
-    for i in range(1,userinp2//2+1):
-        if userinp2%i==0:
-            sum2+=i
-        if userinp1%i==0:
-            sum1+=i
-if sum1==userinp2 and sum2==userinp1:
+    temp1=userinp2
+    temp2=userinp1
+for i in range(1,temp1//2+1):
+    if temp1%i==0:
+        sum1+=i
+    if temp2%i==0:
+        sum2+=i
+if sum1==temp2 and sum2==temp1:
     print("Amicable Number")
 else:
     print("Not Amicable Number...")
