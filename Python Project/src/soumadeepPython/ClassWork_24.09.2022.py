@@ -17,7 +17,7 @@ while temp>0:
     d=temp%10
     sum_of_number+=d
     temp//=10
-for _ in range(1,userinp//2):
+for _ in range(1,userinp):
     count_temp=1
     if userinp%factors==0:
         for k in range(1,factors):
