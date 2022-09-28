@@ -20,6 +20,11 @@ sst=int(input("Social Studies: "))
 math=int(input("Mathematics: "))
 total_marks=eng+hindi+science+sst+math
 percentage=total_marks/5
+longerVal=''
+if len(name)>len(father_name):
+    longerVal=name
+else:
+    longerVal=father_name
 grade=''
 if percentage<=40:
     grade='D'
@@ -35,5 +40,4 @@ elif percentage>80 and percentage<90:
     grade='A'
 elif percentage>90:
     grade='A+'
-
-print(f"_____________REPORT CARD______________\nName: {name}\t\t\t\tClass: {class_}\nFather's Name: {father_name}\t\tMother's Name: {mother_name}\nDate of Birth: {dob}\nEnglish: {eng}\nHindi: {hindi}\nScience: {science}\nSocial Studies: {sst}\nMathematics: {math}\nTotal Marks: {total_marks}\nPercentage: {percentage}\nOverall Grade: {grade}")
+print(f"_____________REPORT CARD______________\nName{' '*(18-len('Name'))}: {name+(' '*(len(longerVal)+5-len(name)))}Class{' '*(16-len('Class'))}: {class_}\nFather's Name{' '*(18-len('Father s Name'))}: {father_name+(' '*(len(longerVal)+5-len(father_name)))}Mother's Name{' '*(16-len('Mother s Name'))}: {mother_name}\nDate of Birth{' '*(18-len('Date of Birth'))}: {dob}\nEnglish{' '*(18-len('English'))}: {eng}\nHindi{' '*(18-len('Hindi'))}: {hindi}\nScience{' '*(18-len('Science'))}: {science}\nSocial Studies{' '*(18-len('Social Studies'))}: {sst}\nMathematics{' '*(18-len('Mathematics'))}: {math}\nTotal Marks{' '*(18-len('Total Marks'))}: {total_marks}\nPercentage{' '*(18-len('Percentage'))}: {percentage}\nOverall Grade{' '*(18-len('Overall Grade'))}: {grade}")
