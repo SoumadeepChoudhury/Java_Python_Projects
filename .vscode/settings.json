@@ -4,5 +4,6 @@
     ],
     "csv-preview.lineNumbers": "source",
     "csv-preview.openStdin": true,
-    "csv-preview.resizeColumns": "all"
+    "csv-preview.resizeColumns": "all",
+    "python.analysis.typeCheckingMode": "basic"
 }
