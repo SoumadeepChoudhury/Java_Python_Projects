@@ -8,4 +8,9 @@ def disarium(number:int)->int:
 
 
 
-## Write a program for Triangular Number...
+# Write a program for Triangular Number...
+def triangularNum(value:int,num:int=1,prevValue:int=0)->int:
+    if prevValue==value:
+        return value
+    prevValue=prevValue+num
+    return triangularNum(value,num+1,prevValue)
