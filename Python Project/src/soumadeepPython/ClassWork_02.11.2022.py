@@ -6,12 +6,6 @@ def disarium(number:int)->int:
     position=len(str(number))
     return (digit**position)+disarium(number//10)
 
-num=135
-res=disarium(137)
-if num==res:
-    print("Disdrium..")
-else:
-    print("Not disarium..")
 
 
 ## Write a program for Triangular Number...
