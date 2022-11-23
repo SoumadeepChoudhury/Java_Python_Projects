@@ -14,7 +14,7 @@ def Push(stk:list,item:str|int|float,stack_type:chr,length:int|None)->None:
             stk.append(item)
     elif stack_type.lower()=="u":
         stk.append(item)
-    print(f"Item {item} pushed successfully..")
+        print(f"Item {item} pushed successfully..")
 
     
 
