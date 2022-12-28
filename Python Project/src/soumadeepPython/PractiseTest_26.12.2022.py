@@ -34,33 +34,46 @@ def valid():
         if i in '({[':
             listStack.append(i)
         if i in ')':
-            for j in listStack:
-                if j!='(':
-                    _=listStack.pop()
-                    continue
-                listStack.pop()
+            if '(' in listStack: 
+                for j in listStack:
+                    if j!='(':
+                        _=listStack.pop()
+                        continue
+                    listStack.pop()
+                    break
+            else:
+                res=False
                 break
 
         if i in '}':
-            for j in listStack:
-                if j!='{':
-                    _=listStack.pop()
-                    continue
-                listStack.pop()
+            if '{' in listStack:
+                for j in listStack:
+                    if j!='{':
+                        _=listStack.pop()
+                        continue
+                    listStack.pop()
+                    break
+            else:
+                res=False
                 break
+
         if i in ']':
-            for j in listStack:
-                if j!='[':
-                    _=listStack.pop()
-                    continue
-                listStack.pop()
+            if '[' in listStack:
+                for j in listStack:
+                    if j!='[':
+                        _=listStack.pop()
+                        continue
+                    listStack.pop()
+                    break
+            else:
+                res=False
                 break
-    if listStack==[]:
+    if listStack==[] and len(userInput)>=2 and res==True:
         print("Valid")
     else:
         print("Invalid")
 
-
+valid()
 #Write a method in Python which will display the nearest prime number.
 def nearestPrime():
     userInput=int(input("Enter number: "))
@@ -142,4 +155,4 @@ def LShift(Arr,n):
             pos=i-n
         Arr[i],Arr[pos]=Arr[pos],Arr[i]
     print(Arr)
-LShift([1,2,3,4,5,6],2)
+#LShift([1,2,3,4,5,6],2)
