@@ -1,11 +1,11 @@
 // WAP to convert the Integer to Roman format. Eg: 1234 : MCCXXXIV
 
-// package soumadeep;
+package soumadeep;
 
 import java.util.Scanner;
 import java.lang.Math;
 
-class IntToRoman {
+public class IntToRoman {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
