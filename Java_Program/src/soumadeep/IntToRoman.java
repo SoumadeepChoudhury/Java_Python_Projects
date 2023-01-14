@@ -1,6 +1,6 @@
 // WAP to convert the Integer to Roman format. Eg: 1234 : MCCXXXIV
 
-package soumadeep;
+// package soumadeep;
 
 import java.util.Scanner;
 import java.lang.Math;
@@ -32,7 +32,7 @@ class IntToRoman {
                         start = j;
                     }
                 }
-                if (UserInt[i] > 1000) {
+                if (UserInt[i] > Inte[Inte.length - 1]) {
                     start = Inte.length - 1;
                 }
                 if (UserInt[i] == Inte[j]) {
