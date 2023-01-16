@@ -1,3 +1,9 @@
+/*
+ * Author : Soumadeep Choudhury
+ * Organisation : Ahens | An Initiative to Initial
+ * Date : 14 January, 2023
+ */
+
 // WAP to convert the Integer to Roman format. Eg: 1234 : MCCXXXIV
 
 package soumadeep;
@@ -11,6 +17,10 @@ public class IntToRoman {
     public static void main(String[] args) {
         System.out.print("Enter Number: ");
         int userInp = sc.nextInt();
+        System.out.println(Convert(userInp));
+    }
+
+    public static String Convert(int userInp) {
         String Roman[] = { "I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M" };
         int Inte[] = { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000 };
         int noOfDigits = Integer.toString(userInp).length();
@@ -63,6 +73,6 @@ public class IntToRoman {
                 }
             }
         }
-        System.out.println(ROMAN);
+        return ROMAN;
     }
 }
